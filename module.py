@@ -60,15 +60,14 @@ def citation(endroit,nb = -1):
             continuer = 0
 
         i = i+ 1
-    chaine_finale = "Citation"
+
     if nb >= 0 and nb < len(citation):
     	f = nb
-    	chaine_finale =   " La citation a pour auteur  : "+ auteur[f]+ ". Voici la citation : " +citation[f]
     else :
     	nb = -1 # Si le nombre ne correspond pas à une citation alors on demande une citation aléatoire
 
 
     if nb == -1:
     	f =  random.randint(0,i-1) # Le -1 c'est pour enlever la fausse citation "Fin" qui a pour auteur "Fin"
-    	chaine_finale =   " La citation aleatoire a pour auteur  : "+ auteur[f]+ ". Voici la citation : " +citation[f]
+    chaine_finale =   " La citation aleatoire a pour auteur  : "+ auteur[f]+ ". Voici la citation : " +citation[f]
     return chaine_finale
